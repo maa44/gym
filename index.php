@@ -12,6 +12,7 @@ include("header.html");
   </div>
 </div>
 
+
         </section>
 <?php
 include("footer.html");
