@@ -1,25 +1,39 @@
 <?php
 include("header.html");
 ?>
-<section id="d6" class="col-8 bg-info list-inline m-5 ">
 
-   <div class="col-5 m-5">
-   <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-
-
-<label for="inputPassword5" class="form-label">Password</label>
-<input type="password" id="inputPassword5" class="form-control " aria-describedby="passwordHelpBlock">
-<div id="passwordHelpBlock" class="form-text ">
-رمز عبور شما باید 8 تا 20 کاراکتر داشته باشد، دارای حروف و اعداد باشد و نباید دارای فاصله، کاراکترهای خاص یا ایموجی باشد.  
-</div>
-<div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3" onclick="ngh()" id="log">Confirm identity</button>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center bg-primary text-white">
+            <h4>ورود</h4>
+          </div>
+          <div class="card-body bg-dark">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">ایمیل</label>
+                <input type="email" class="form-control" id="email" placeholder="ایمیل خود را وارد کنید">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">رمز عبور</label>
+                <input type="password" class="form-control" id="password" placeholder="رمز عبور خود را وارد کنید">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label text-light" for="remember">مرا به خاطر بسپار</label>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">ورود</button>
+            </form>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <p>حساب کاربری ندارید؟ <a class="text-info" href="singup.php">ثبت‌ نام</a></p>
+          <p><a class="text-info" href="#">رمز عبور خود را فراموش کرده‌اید؟</a></p>
+        </div>
+      </div>
+    </div>
   </div>
-     
-<script src="login.js"></script>
 <?php
 include("footer.html");
 ?>
