@@ -13,11 +13,11 @@ include("header.html");
             <form>
               <div class="mb-3">
                 <label for="email" class="form-label">ایمیل</label>
-                <input type="email" class="form-control" id="email" placeholder="ایمیل خود را وارد کنید">
+                <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل خود را وارد کنید">
               </div>
               <div class="mb-3">
                 <label for="password" class="form-label">رمز عبور</label>
-                <input type="password" class="form-control" id="password" placeholder="رمز عبور خود را وارد کنید">
+                <input type="password" class="form-control" name="password" id="password" placeholder="رمز عبور خود را وارد کنید">
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="remember">
