@@ -36,7 +36,7 @@ include("header.html");
           </div>
         </div>
         <div class="text-center mt-3">
-          <p class="text-dark">از قبل حساب کاربری دارید؟ <a class="text-info" href="login.html">وارد شوید</a></p>
+          <p class="text-dark">از قبل حساب کاربری دارید؟ <a class="text-info" href="login.php">وارد شوید</a></p>
         </div>
       </div>
     </div>

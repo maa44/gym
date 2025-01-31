@@ -10,7 +10,7 @@ include("header.html");
             <h4>ورود</h4>
           </div>
           <div class="card-body bg-dark">
-            <form>
+            <form action="login_action.php" method="post">
               <div class="mb-3">
                 <label for="email" class="form-label">ایمیل</label>
                 <input type="email" class="form-control" name="email" id="email" placeholder="ایمیل خود را وارد کنید">
