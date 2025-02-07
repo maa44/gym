@@ -13,7 +13,7 @@ include("header.html");
 </div>
 
 
-        </section>
+    </section>
 <?php
 include("footer.html");
 ?>

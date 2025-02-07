@@ -15,6 +15,28 @@ include("header.html");
                 <label for="username" class="form-label">نام کاربری</label>
                 <input type="text" class="form-control" name="username" id="username" placeholder="نام کاربری را وارد کنید">
               </div>
+              <?php
+              $a=mysqli_connect("localhost","root","","gym");
+              $b=mysqli_query($a,"SELECT * FROM `city`");
+              mysqli_close($a);
+              ?> 
+              <a href="citynew.php"><button type="button">+</button></a>
+              <select class="mb-3" name="" id="">
+              <?php
+              $row=mysqli_fetch_array($b);
+              while($row)
+              {
+              ?>
+              <option value="">
+              <?php echo($row["city"]);?>
+
+              </option>
+                <?php
+                $row=mysqli_fetch_array($b);
+                }
+                ?>
+              </select>
+              <a href="city.php">نام شهر ها</a>
               <div class="mb-3">
                 <label for="email" class="form-label">آدرس ایمیل</label>
                 <input type="email"  class="form-control " name="email" id="email" placeholder="ایمیلتان را وارد کنید">
