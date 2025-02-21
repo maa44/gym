@@ -1,5 +1,5 @@
 <?php
-include("header.html");
+include("header.php");
 ?>
 
 <div class="container mt-5">

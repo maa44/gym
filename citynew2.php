@@ -1,5 +1,5 @@
 <?php
-include("header.html");
+include("header.php");
 $name=$_POST["name"];
 $a=mysqli_connect("localhost","root","","gym");
 $b=mysqli_query($a,"INSERT INTO `city`(`city`) VALUES ('$name');");

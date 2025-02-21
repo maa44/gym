@@ -1,5 +1,5 @@
 <?php
-include("header.html");
+include("header.php");
 ?> 
 <?php
 $email=$_POST["email"];
@@ -8,12 +8,26 @@ $c=mysqli_connect("localhost","root","","gym");
 $result=mysqli_query($c,"SELECT * FROM `user` WHERE `email`='$email'and`password`='$password'");
 $row=mysqli_fetch_array($result);
 if($row){
-    echo("وارد شدید");
+    $_SESSION["login"]=true;
+
+    ?>
+    <script>
+        alert("ورود موفقیت آمیز");
+    location.replace("index.php");
+    </script>
+    <?php
 }else{
-    echo("...دقت کنید");
+    ?>
+    <script>
+        alert("...دقت کنید");
+        location.replace("login.php");
+    </script>
+    
+    <?php
 }
 mysqli_close($c);
 ?>
+
 <?php
 include("footer.html");
 ?>

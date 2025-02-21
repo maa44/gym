@@ -1,5 +1,5 @@
 <?php
-include("header.html");
+include("header.php");
 $id=$_GET["id"];
 $a=mysqli_connect("localhost","root","","gym");
 $b=mysqli_query($a,"SELECT * FROM `city`WHERE `id`=$id");

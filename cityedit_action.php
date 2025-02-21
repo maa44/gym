@@ -1,6 +1,6 @@
 
 <?php
-include("header.html");
+include("header.php");
 $id=$_POST["id"];
 $name=$_POST["name"];
 $a=mysqli_connect("localhost","root","","gym");
