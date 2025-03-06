@@ -22,7 +22,7 @@ session_start();
     <div class="card m-1" >
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.php">
             <img src="./img/fitness-gym-logo-letter-m-260nw-2420954215.jpg" alt="Logo" width="50" height="50" class=" align-items-center">
             gym maa
           </a>
@@ -54,6 +54,12 @@ session_start();
                 <a class="nav-link text-primary" href="signup.php">sign up</a>
               </li>
               <?php } ?>
+              <?php if(isset($_SESSION["admin"]) && $_SESSION["admin"]==true){ ?>
+              <li class="nav-item">
+                <a class="nav-link active text-primary" aria-current="page" href="admin.php">Admin</a>
+              </li>
+              <?php }else{ ?>
+                <?php } ?>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-primary" href="footer.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   about us

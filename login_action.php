@@ -9,7 +9,7 @@ $result=mysqli_query($c,"SELECT * FROM `user` WHERE `email`='$email'and`password
 $row=mysqli_fetch_array($result);
 if($row){
     $_SESSION["login"]=true;
-
+    $_SESSION["admin"]=$row["admin"];
     ?>
     <script>
         alert("ورود موفقیت آمیز");
