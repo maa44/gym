@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2025 at 01:02 PM
+-- Generation Time: Apr 25, 2025 at 11:28 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -48,6 +48,35 @@ INSERT INTO `city` (`id`, `city`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL,
+  `newid` int(11) NOT NULL,
+  `text` varchar(225) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `sabt` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `newid`, `text`, `time`, `sabt`) VALUES
+(1, 1, '', '2025-04-25 21:17:39', 1),
+(2, 1, '', '2025-04-25 21:17:41', 1),
+(3, 1, '', '2025-04-25 21:17:42', 1),
+(4, 1, '', '2025-04-25 21:17:45', 1),
+(5, 1, '', '2025-04-25 21:17:43', 1),
+(6, 1, '', '2025-04-25 21:17:44', 1),
+(7, 1, '', '2025-04-25 21:17:44', 1),
+(8, 1, '', '2025-04-25 21:17:45', 1),
+(10, 1, 'hj', '2025-04-25 21:19:14', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `new`
 --
 
@@ -79,18 +108,19 @@ CREATE TABLE `user` (
   `user name` varchar(20) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(8) NOT NULL,
-  `admin` tinyint(1) NOT NULL
+  `admin` tinyint(1) NOT NULL,
+  `mc` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_persian_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `user name`, `email`, `password`, `admin`) VALUES
-(1, 'm', 'ade@hj', '1234', 1),
-(2, 'mamad', 'mohamad@G.c', '1594', 0),
-(3, 'mmd', 'aer@g.c', '1579', 0),
-(4, 'maa', 'mohamad@G.c', '1478', 0);
+INSERT INTO `user` (`id`, `user name`, `email`, `password`, `admin`, `mc`) VALUES
+(1, 'm', 'ade@hj', '1234', 1, 1),
+(2, 'mamad', 'mohamad@G.c', '1594', 0, 0),
+(3, 'mmd', 'aer@g.c', '1579', 0, 0),
+(4, 'maa', 'mohamad@G.c', '1478', 0, 0);
 
 --
 -- Indexes for dumped tables
@@ -100,6 +130,12 @@ INSERT INTO `user` (`id`, `user name`, `email`, `password`, `admin`) VALUES
 -- Indexes for table `city`
 --
 ALTER TABLE `city`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -125,10 +161,16 @@ ALTER TABLE `city`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `new`
 --
 ALTER TABLE `new`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
