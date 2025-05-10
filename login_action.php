@@ -10,7 +10,7 @@ $row=mysqli_fetch_array($result);
 if($row){
     $_SESSION["login"]=true;
     $_SESSION["admin"]=$row["admin"];
-    $_SESSION["scomm"]=$row["mco"];
+    $_SESSION["scomm"]=$row["mc"];
     ?>
     <script>
         alert("ورود موفقیت آمیز");

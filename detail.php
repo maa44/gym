@@ -38,7 +38,7 @@ $row=mysqli_fetch_array($result);
             <textarea class="form-control" name="textcom" id="userComment" rows="3"
               placeholder="نظر خود را اینجا بنویسید..."></textarea>
           </div>
-          <button type="submit" class="btn btn-outline-success">ارسال نظر</button>
+          <button type="submit" class="btn btn-outline-dark">ارسال نظر</button>
         </form>
             </div>
             <?php
